@@ -91,6 +91,9 @@ export default {
   computed: {
     columns() {
       return [
+        {name: 'My testing'}
+      ]
+      return [
         { name: this.$t("list.title.file"), style: "" },
         {
           name: this.$t("list.title.moditime"),

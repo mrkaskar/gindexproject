@@ -3,6 +3,14 @@
     <Layout ref="layout" />
   </div>
 </template>
+<style>
+  body{
+    /* background-color: rgb(82, 82, 82); */
+    height: 100vh;
+      background-size: cover;
+      font-family: 'Open Sans', sans-serif !important;
+  }
+</style>
 
 <script>
 import util from "@/libs/util";
@@ -15,7 +23,7 @@ export default {
   },
   data: function() {
     return {
-      github: "https://github.com/Aicirou/goindex-theme-acrou",
+      github: "https://github.com/kzinthant-d3v/gindexproject",
     };
   },
   watch: {
@@ -33,17 +41,17 @@ export default {
       document.querySelector("html").setAttribute("lang", val);
     },
     checkVersion() {
-      let g2index_version = window.gdconfig.version;
-      let app_version = process.env.VUE_APP_G2INDEX_VERSION;
-      if (!g2index_version || app_version !== g2index_version) {
-        this.$notify({
-          title: this.$t("notify.title"),
-          dangerouslyUseHTMLString: true,
-          message: this.$t("checkVersion.tips").replace("${url}", this.github),
-          duration: 0,
-          type: "success",
-        });
-      }
+      // let g2index_version = window.gdconfig.version;
+      // let app_version = process.env.VUE_APP_G2INDEX_VERSION;
+      // if (!g2index_version || app_version !== g2index_version) {
+      //   this.$notify({
+      //     title: this.$t("notify.title"),
+      //     dangerouslyUseHTMLString: true,
+      //     message: this.$t("checkVersion.tips").replace("${url}", this.github),
+      //     duration: 0,
+      //     type: "success",
+      //   });
+      // }
     },
   },
 };

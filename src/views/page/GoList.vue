@@ -22,6 +22,7 @@
         :action="action"
         :thum="thum"
       />
+      <button v-if="loadmore" id="loadMore" @click="infiniteHandler">Load More</button>
       <infinite-loading
         v-show="!loading"
         ref="infinite"
@@ -33,8 +34,10 @@
       </infinite-loading>
       <div
         v-show="files.length === 0"
-        class="has-text-centered no-content"
-      ></div>
+        class="has-text-centered"
+      >
+      <img class="no-content" src="images/no-data.png"/>
+      </div>
     </div>
     <div
       class="is-divider"
@@ -66,6 +69,22 @@
     </viewer>
   </div>
 </template>
+<style scoped>
+#loadMore{
+  border: none;
+  background-image: linear-gradient(to bottom, rgb(0, 255, 157), rgb(0, 177, 109));
+  border-radius: 10px;
+  padding: 10px;
+  position: absolute;
+  bottom: -100px;
+  left: 50%;
+  width: 100px;
+  margin-left: -50px;
+  font-size: 13px;
+  font-weight: bold;
+  color: white;
+}
+</style>
 
 <script>
 import {
@@ -95,6 +114,7 @@ export default {
     return {
       infiniteId: +new Date(),
       loading: true,
+      loadmore: true,
       page: {
         page_token: null,
         page_index: 0,
@@ -163,8 +183,10 @@ export default {
     ...mapActions("acrou/aplayer", ["add"]),
     ...mapActions("acrou/db", ["set"]),
     infiniteHandler($state) {
+      alert('this function is called')
       // 首次进入页面不执行滚动事件
       if (!this.page.page_token) {
+        this.loadmore = false;
         return;
       }
       this.page.page_index++;

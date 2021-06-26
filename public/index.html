@@ -17,6 +17,15 @@
   <% for (var i in htmlWebpackPlugin.options.cdn&&htmlWebpackPlugin.options.cdn.js) { %>
   <script src="<%= htmlWebpackPlugin.options.cdn.js[i] %>"></script>
   <% } %>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+<style>
+  body{
+      background-image: url('./images/background.svg');
+  }
+</style>
 </head>
 
 <body>

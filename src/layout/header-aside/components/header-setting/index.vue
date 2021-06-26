@@ -1,19 +1,34 @@
 <template>
-  <div class="navbar-item has-dropdown is-hoverable">
-    <a class="navbar-link is-arrowless" title="Setting">
-      <i class="fa fa-cog" aria-hidden="true"></i>
-    </a>
-    <div class="navbar-dropdown is-left">
-      <a class="navbar-item" @click="cleanCache">
+      <button id="clearcache" class="navbar-item" @click="cleanCache">
         <span class="icon">
           <i class="fa fa-trash" aria-hidden="true"></i>
         </span>
+        <span id="text">
         {{ $t("setting.clear.text") }}
-      </a>
-    </div>
-  </div>
+        </span>
+      </button>
 </template>
 
+<style scoped>
+ #clearcache{
+  background: linear-gradient(to top, #EF4358 0%, #e48f99 110%); 
+   border: none;
+   border-radius: 16px;
+   height: 46px;
+   margin-top: 4px;
+   font-size: 16px;
+   box-shadow: 0 4px 16px #ef43578e;
+   color: white;
+ }
+ .icon{
+   margin-right: 2px !important;
+ }
+@media only screen and (max-width: 1500px) {
+ #text{
+   display: none;
+ }
+}
+</style>
 <script>
 import { mapActions } from "vuex";
 import util from "@/libs/util";

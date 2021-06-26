@@ -50,7 +50,8 @@ const frameIn = [
     ],
   },
   {
-    path: "/:id(\\d+)::cmd(search)(/?q=)*",
+    // path: "/:id(\\d+)::cmd(search)(/?q=)*",
+    path: "/testing3",
     component: _import("page/GoList"),
     meta: {
       ...meta,

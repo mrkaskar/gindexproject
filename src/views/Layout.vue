@@ -23,7 +23,7 @@ export default {
   },
   components: {
     Head,
-    Footer: Footer,
+    // Footer: Footer,
     APlayer
   },
   methods: {},

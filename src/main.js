@@ -14,6 +14,8 @@ import Clipboard from "@/plugin/clipboard";
 import VueLazyload from "vue-lazyload";
 import Viewer from "v-viewer";
 import cdnpath from "./libs/util.cdn";
+import VueFab from 'vue-float-action-button'
+
 // 组件
 import "@/components";
 import "viewerjs/dist/viewer.css";
@@ -31,6 +33,7 @@ Vue.use(VueLazyload, {
   loading: cdnpath("images/airplane.gif"),
 });
 Vue.use(Viewer);
+Vue.use(VueFab);
 
 new Vue({
   router,
