@@ -1,10 +1,11 @@
 <template>
   <div>
     <nav
-      class="breadcrumb level g2-breadcrumb is-hidden-mobile"
+      class="breadcrumb level g2-breadcrumb"
       aria-label="breadcrumbs"
+      style="color: white;margin-top: -10px"
     >
-      <div class="level-left">
+      <div class="level-left is-hidden-mobile">
         <div class="level-item">
           <ul>
             <li>

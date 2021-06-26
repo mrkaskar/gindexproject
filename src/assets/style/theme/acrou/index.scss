@@ -44,17 +44,23 @@ body {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+.g2-grid-view {
+  background-color: #ff404028;
+}
 
 .table {
   width: 100%;
   table-layout: fixed;
-
+  background-color: #ff404028;
+  color: white !important;
   th,
   td {
+    color: white !important;
     border: 0 !important;
   }
 
   td {
+    color: white !important;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -84,7 +90,17 @@ body {
 }
 
 .no-content {
-  height: 400px;
+  background: url(#{$cdnPath}images/no-data.png) no-repeat;
+  background-attachment: fixed;
+  background-size: 45%;
+  background-position: center center;
+  height: 600px;
+}
+
+@media screen and (min-width: 1000px) {
+  .no-content {
+    background-size: 10%;
+  }
 }
 
 .video-content {

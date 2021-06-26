@@ -1,7 +1,7 @@
 <template>
       <button id="clearcache" class="navbar-item" @click="cleanCache">
         <span class="icon">
-          <i class="fa fa-trash" aria-hidden="true"></i>
+          <span class="material-icons">auto_delete</span>
         </span>
         <span id="text">
         {{ $t("setting.clear.text") }}
@@ -26,6 +26,10 @@
 @media only screen and (max-width: 1500px) {
  #text{
    display: none;
+ }
+ .icon{
+   padding-top: 10px;
+   padding-left: 5px;
  }
 }
 </style>

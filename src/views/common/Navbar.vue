@@ -27,7 +27,6 @@
           </div>
         </div>
   <vue-fab mainBtnColor="#322250" icon="reorder"
-  scrollAutoHide="false" 
   >
   <fab-item
     @click="changeItem(item)"
@@ -36,7 +35,6 @@
     :title="item.name"
     :idx="index"
     icon="dns"
-    size="small"
     />
 </vue-fab>
 
@@ -52,8 +50,8 @@
                   type="search"
                   placeholder="Search Precious Things"
                 />
-                <span class="icon is-small is-left" style="padding:0 5px;">
-                <i class="fa fa-search" aria-hidden="true"></i>
+                <span class="icon is-small is-left" style="padding-left: 10px">
+                <span id="search" class="material-icons">search</span>
                 </span>
               </p>
             </div>
@@ -96,7 +94,7 @@
     width: 100%;
   }
 }
-i{
+#search{
   color: white;
 }
 .mycontainer{
@@ -131,6 +129,7 @@ input:focus{
  margin-top: 10px;
  border-radius: 15px;
  padding: 5px;
+ 
 
 }
 .navbar-end{
@@ -200,7 +199,8 @@ export default {
   },
   computed: {
     getCurrGD() {
-      return this.gds.filter((item) => item.name !== this.currgd.name);
+      return this.gds;
+      //return this.gds.filter((item) => item.name !== this.currgd.name);
     },
     showSearch() {
       // 文件夹不支持搜索

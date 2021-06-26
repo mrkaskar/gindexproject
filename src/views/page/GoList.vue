@@ -33,9 +33,9 @@
       </infinite-loading>
       <div
         v-show="files.length === 0"
-        class="has-text-centered"
+        class="has-text-centered no-content"
       >
-      <img class="no-content" src="images/no-data.png"/>
+
       </div>
     </div>
     <div
