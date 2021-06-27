@@ -3,7 +3,7 @@
     <div class="mycontainer">
       <div class="navbar-brand">
         <a class="navbar-item" :href="currgd.id">
-          <h3 class="title is-3 has-text-white">PreciousThings</h3>
+          <h3 class="title is-3 has-text-white">{{ siteName }}</h3>
         </a>
       </div>
       <div
@@ -139,15 +139,15 @@ input:focus{
 </style>
 
 <script>
-import headerLocales from "@/layout/header-aside/components/header-locales";
+// import headerLocales from "@/layout/header-aside/components/header-locales";
 import headerSetting from "@/layout/header-aside/components/header-setting";
-import ViewMode from "@/layout/viewmode";
+// import ViewMode from "@/layout/viewmode";
 
 export default {
   components: {
-    headerLocales,
+    // headerLocales,
     headerSetting,
-    ViewMode,
+    // ViewMode,
   },
   created() {
     this.siteName = document.getElementsByTagName("title")[0].innerText;

@@ -23,6 +23,10 @@ tr:hover {
   max-width: 980px;
 }
 
+.is-active {
+  color: rgb(80, 80, 255);
+}
+
 .iconfont {
   width: 2em;
   height: 2em;
@@ -54,15 +58,15 @@ tr:hover {
   width: 100%;
   table-layout: fixed;
   background-color: #ff404028;
-  color: white !important;
+  //color: white !important;
   th,
   td {
-    color: white !important;
+    //color: white !important;
     border: 0 !important;
   }
 
   td {
-    color: white !important;
+    //color: white !important;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -128,6 +132,7 @@ tr:hover {
 }
 
 .golist {
+  background-color: transparent !important;
   min-height: 240px;
   position: relative;
 

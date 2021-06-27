@@ -6,7 +6,7 @@
       style="color: white;margin-top: -10px"
     >
       <div class="level-left is-hidden-mobile">
-        <div class="level-item">
+        <div class="level-item" style="color: white">
           <ul>
             <li>
               <a

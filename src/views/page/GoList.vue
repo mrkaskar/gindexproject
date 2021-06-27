@@ -6,7 +6,7 @@
       style="margin:1rem 0;"
     ></headmd>
     <bread-crumb ref="breadcrumb"></bread-crumb>
-    <div class="golist" v-loading="loading">
+    <div class="golist" v-loading="">
       <list-view
         :data="files"
         v-if="mode === 'list'"
@@ -34,7 +34,6 @@
       <div
         v-show="files.length === 0"
         class="has-text-centered no-content"
-        style="background-color: transparent !important"
       >
 
       </div>
