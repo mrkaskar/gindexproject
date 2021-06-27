@@ -41,6 +41,7 @@
                 v-if="file.thumbnailLink"
                 v-lazy="thum(file.thumbnailLink)"
                 :alt="file.name"
+                style="object-fit: cover"
               />
               <svg v-else class="file-icon iconfont" aria-hidden="true">
                 <use :xlink:href="getIcon(file.mimeType)" />
@@ -48,7 +49,7 @@
             </figure>
           </div>
           <div class="media g2-grid-view-file">
-            <div class="content" :title="file.name">
+            <div class="content" :title="file.name" style="color: white">
               <svg class="iconfont" aria-hidden="true">
                 <use :xlink:href="getIcon(file.mimeType)" />
               </svg>
