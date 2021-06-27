@@ -27,14 +27,15 @@
           </div>
         </div>
   <vue-fab mainBtnColor="#322250" icon="reorder"
+  :scrollAutoHide=false
   >
   <fab-item
-    @click="changeItem(item)"
     v-for="(item, index) in getCurrGD"
     v-bind:key="index"
     :title="item.name"
     :idx="index"
     icon="dns"
+    @clickItem="changeItem(item)"
     />
 </vue-fab>
 

@@ -34,6 +34,7 @@
       <div
         v-show="files.length === 0"
         class="has-text-centered no-content"
+        style="background-color: transparent !important"
       >
 
       </div>

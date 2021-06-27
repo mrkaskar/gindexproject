@@ -96,6 +96,7 @@ export default {
 <style lang="scss" scoped>
 .g2-grid-view {
   margin-bottom: 2rem;
+  color: white !important;
 }
 .media-left {
   margin-right: 0.5rem;

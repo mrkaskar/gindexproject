@@ -33,11 +33,11 @@
             <use :xlink:href="icons(file.mimeType)" />
           </svg>
           {{ file.name }}
-          <span
+          <!-- <span
             class="has-text-grey g2-file-desc"
             v-if="isShowDesc"
             v-html="file.description"
-          ></span>
+          ></span> -->
         </td>
         <td class="is-hidden-mobile is-hidden-touch">{{ file.size }}</td>
         <td class="is-hidden-mobile is-hidden-touch">
@@ -88,12 +88,7 @@ export default {
   computed: {
     columns() {
       return [
-        { name: this.$t("list.title.file"), style: "" },
-        {
-          name: this.$t("list.title.moditime"),
-          style: "width:20%",
-          class: "is-hidden-mobile is-hidden-touch",
-        },
+        { name: this.$t("list.title.file"), style: "width:80%" },
         {
           name: this.$t("list.title.size"),
           style: "width:10.5%",
@@ -101,8 +96,7 @@ export default {
         },
         {
           name: this.$t("list.title.operation"),
-          style: "width:13.5%",
-          class: "is-hidden-mobile is-hidden-touch",
+          style: "width:25%",
         },
       ];
     },
