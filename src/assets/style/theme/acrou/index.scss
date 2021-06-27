@@ -12,7 +12,9 @@
 body {
   overflow: hidden;
 }
-
+tr:hover {
+  background-color: rgba(0, 0, 0, 0.151) !important;
+}
 .section {
   padding: 0.5rem 0.5rem 1.5rem 0.5rem;
 }

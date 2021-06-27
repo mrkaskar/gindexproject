@@ -39,9 +39,6 @@
             v-html="file.description"
           ></span>
         </td>
-        <td class="is-hidden-mobile is-hidden-touch">
-          {{ file.modifiedTime }}
-        </td>
         <td class="is-hidden-mobile is-hidden-touch">{{ file.size }}</td>
         <td class="is-hidden-mobile is-hidden-touch">
           <span class="icon" @click.stop="action(file,'copy')">
@@ -90,9 +87,6 @@ export default {
   },
   computed: {
     columns() {
-      return [
-        {name: 'My testing'}
-      ]
       return [
         { name: this.$t("list.title.file"), style: "" },
         {
