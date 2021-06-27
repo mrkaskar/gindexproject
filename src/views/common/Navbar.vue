@@ -26,8 +26,10 @@
             </div> -->
           </div>
         </div>
-  <vue-fab mainBtnColor="#322250" icon="reorder"
+  <vue-fab mainBtnColor="#301F4E" icon="reorder"
   :scrollAutoHide=false
+  size="big"
+  :globalOptions="{spacing: 45}"
   >
   <fab-item
     v-for="(item, index) in getCurrGD"
@@ -36,6 +38,9 @@
     :idx="index"
     icon="dns"
     @clickItem="changeItem(item)"
+    :style="{
+      backgroundColor: item.name === currgd.name ? 'greenyellow': 'white',
+      }"
     />
 </vue-fab>
 

@@ -39,8 +39,8 @@
             v-html="file.description"
           ></span> -->
         </td>
-        <td class="is-hidden-mobile is-hidden-touch">{{ file.size }}</td>
-        <td class="is-hidden-mobile is-hidden-touch">
+        <td>{{ file.size }}</td>
+        <td>
           <span class="icon" @click.stop="action(file,'copy')">
             <i
               class="fa fa-copy faa-shake animated-hover"
@@ -88,11 +88,11 @@ export default {
   computed: {
     columns() {
       return [
-        { name: this.$t("list.title.file"), style: "width:80%" },
+        { name: this.$t("list.title.file"), style: "width:50%" },
         {
           name: this.$t("list.title.size"),
-          style: "width:10.5%",
-          class: "is-hidden-mobile is-hidden-touch",
+          style: "width:25%",
+          //class: "is-hidden-mobile is-hidden-touch",
         },
         {
           name: this.$t("list.title.operation"),
