@@ -96,7 +96,6 @@
     height: 85px;
     width: 100% !important;
     padding-right: 16px;
-    position: fixed;
   }
   .mycontainer{
     width: 100%;
