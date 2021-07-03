@@ -90,11 +90,13 @@
     flex: 2;
   }
   .navbar-menu{
-    width: 100%;
+    display: none;
   }
   .mynavbar{
     height: 85px;
-    width: 90% !important;
+    width: 100% !important;
+    padding-right: 16px;
+    position: fixed;
   }
   .mycontainer{
     width: 100%;
