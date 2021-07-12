@@ -46,7 +46,7 @@
 
         <div class="navbar-end">
           <!-- is-hidden-desktop -->
-          <div class="navbar-item">
+          <div class="navbar-item" v-show="true">
             <div class="field is-grouped">
               <p class="control has-icons-left" style="width:100%;">
                 <input
