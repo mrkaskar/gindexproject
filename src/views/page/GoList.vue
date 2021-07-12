@@ -6,7 +6,7 @@
       style="margin:1rem 0;"
     ></headmd>
     <bread-crumb ref="breadcrumb"></bread-crumb>
-    <div class="golist" v-loading="">
+    <div class="golist" v-loading="loading">
       <list-view
         :data="files"
         v-if="mode === 'list'"
@@ -34,9 +34,7 @@
       <div
         v-show="files.length === 0"
         class="has-text-centered no-content"
-      >
-
-      </div>
+      ></div>
     </div>
     <div
       class="is-divider"
@@ -166,9 +164,9 @@ export default {
     ...mapActions("acrou/db", ["set"]),
     infiniteHandler($state) {
       // 首次进入页面不执行滚动事件
-     // if (!this.page.page_token) {
-       // return;
-      //}
+      if (!this.page.page_token) {
+        return;
+      }
       this.page.page_index++;
       this.render($state);
     },
@@ -274,13 +272,11 @@ export default {
         });
         return;
       }
-
       let cmd = this.$route.params.cmd;
       if (cmd && cmd === "search" && isSearch) {
         this.goSearchResult(file, target);
         return;
       }
-
       if (file.mimeType.startsWith("image/") && target === "view") {
         this.viewer = true;
         this.$nextTick(() => {
